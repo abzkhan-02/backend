@@ -5,9 +5,9 @@ const userController= require('../controllers/userController')
 const router= express.Router()
 
 
-router.get('/',userController.sendUser);
+router.get('/user',userController.sendUser);
 
-router.get('/user',userController.sendUserAdmin)
+router.get('/',userController.sendUserAdmin)
 
 
 module.exports = router;

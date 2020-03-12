@@ -1,10 +1,15 @@
 const express = require('express')
-const bodyParser = require('body-parser');
+// const bodyParser = require('body-parser');
 
-const user= require('./Router/userRouter')//import user router from Router directory
-
+const userRouter= require('./Router/userRouter')//import user router from Router directory
+const stateRouter= require('./Router/stateRouter')
+const areaRouter=require('./Router/areaRouter')
+const cityRouter=require('./Router/cityRouter')
 const app = express()
 
-app.use(user);
+app.use(userRouter);
+app.use(stateRouter);
+app.use(areaRouter);
+app.use(cityRouter);
 
 app.listen(4000);
